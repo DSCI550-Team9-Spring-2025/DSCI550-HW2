@@ -8,3 +8,5 @@ Large scale data extraction and analysis for the haunted places dataset.
 - Anneliese Wilkins
 - Austin Oliver
 - Gideon Nazarian
+
+# Geoparser tool configuration to extract the coordinate location name
