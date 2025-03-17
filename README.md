@@ -10,4 +10,4 @@ Large scale data extraction and analysis for haunted places dataset.
 - Gideon Nazarian
 # Dataset
 tsv2.tsv
-# Geoparser tool configuration to extract the coordinate location name
+# Geoparser tool configuration to extract coordinate locations name
