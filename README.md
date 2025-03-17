@@ -1,5 +1,5 @@
 # DSCI550-HW2
-Large scale data extraction and analysis for the haunted places dataset.
+Large scale data extraction and analysis for haunted places dataset.
 
 # Contributors
 - Sena London
