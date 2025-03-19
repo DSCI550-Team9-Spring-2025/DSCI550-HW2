@@ -1,13 +1,14 @@
 # DSCI550-HW2
 Large scale data extraction and analysis for haunted places dataset.
 
-# Contributors
+## Contributors
 - Sena London
 - Kevin Sy
 - Andrew Turangan
 - Anneliese Wilkins
 - Austin Oliver
 - Gideon Nazarian
-# Dataset
-tsv2.tsv
-# Geoparser tool configuration to extract coordinate locations name
+## Dataset
+```Data/v2.tsv```
+## Geoparser tool configuration to extract coordinate locations name
+...
