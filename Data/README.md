@@ -4,4 +4,4 @@
 ```v2.tsv```: main dataset with added features
 - Corrections from v1.tsv added "apparition_adj_str" and fixed keyword_dictionary for Apparition_Descriptors and added in Apparition_Adjectives. <br>
 #### Supplementary Data
-...
+```keywords_dictionary_v2.csv```: keyword bank for text matching schemas
