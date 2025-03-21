@@ -32,7 +32,7 @@ def write_spacy(df: pd.DataFrame, txtfile: str="spacy.txt"):
             file.write("\n")
 
 @runtime
-def parse_spacy(inpath: str="spacy.txt", outpath: str='../Data/spacy_andrew.csv', size: int=0):
+def parse_spacy(inpath: str="spacy.txt", outpath: str='../Data/spacy.csv', size: int=0):
     """Parses input txt into output csv."""
     if not os.path.exists(inpath):
         print(f"Error: {inpath} does not exist.")
@@ -60,8 +60,8 @@ def parse_spacy(inpath: str="spacy.txt", outpath: str='../Data/spacy_andrew.csv'
 
     # generate output csv
     df = pd.DataFrame(parsed_data, columns=["spacy_entities"])
-    print(df.columns)
     df.to_csv(outpath, index=False)
+    print(outpath + " created!")
 
 def main():
     print("IF YOU HAVEN'T, run", "'python -m spacy download en_core_web_sm'")
@@ -100,7 +100,7 @@ def main():
     # spacy_andrew.csv sample
     print("Result Sample")
     print("-" * 25)
-    spacy_df = pd.read_csv("../Data/spacy_andrew.csv")
+    spacy_df = pd.read_csv("../Data/spacy.csv")
     print("spacy_df.iloc[0]['spacy_entities']")
     print("-" * 15)
     print(spacy_df.iloc[0]['spacy_entities'])
