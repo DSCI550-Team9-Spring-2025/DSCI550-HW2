@@ -11,4 +11,4 @@ Large scale data extraction and analysis for haunted places dataset.
 ## Dataset
 ```Data/v2.tsv```
 ## Geoparser tool configuration to extract coordinate locations name
-...
+see https://github.com/Hibis5946/geotopicparser-utils/blob/master/README_tika_geo_parser.txt
