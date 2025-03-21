@@ -2,6 +2,7 @@
 
 #### Main Source Files
 - ```JOIN_COLUMNS.py``` or ```JOIN_COLUMNS.ipynb``` (TBD): final step, joins newly generated columns from ```.../Data/``` to generate ```v2.tsv```
+- ```process_geotagger.py```: geotagger processing, generates ```../Data/v2_with_geo.tsv```
 - ```get_spacy_col.py```: extracts name entities using SpaCy and writes to ```spacy.txt``` and parses it to generate ```../Data/spacy.csv```
 - ```...```: ...
 
