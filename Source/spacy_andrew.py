@@ -3,7 +3,7 @@ import pandas as pd
 import time
 import os
 
-def runtime(func) -> function:
+def runtime(func):
     """Wrapper function decorator to calculate runtime in seconds."""
     def wrapper(*args, **kwargs) -> None:
         start = time.time()
@@ -40,13 +40,13 @@ def parse_spacy(path: str="spacy.txt"):
     
 
 def main():
-    print("If you haven't, run", "'python -m spacy download en_core_web_sm'")
+    print("IF YOU HAVEN'T, run", "'python -m spacy download en_core_web_sm'")
     print("")
 
     print("Spacy NER")
     print("-" * 50)
 
-    # create spacy.txt
+    # create spacy.txt: takes 2-3 minutes on andrew's machine
     if not os.path.exists("spacy.txt"):
         df = pd.read_csv("../Data/v2.tsv", usecols=["description"], sep='\t')
 
@@ -61,7 +61,7 @@ def main():
 
         print("Get spacy_entities column")
         print("-" * 25)
-        print("Writing to 'spacy.txt'")
+        print("Writing to 'spacy.txt'...")
         write_spacy(df)
         print("Done!")
         print("")
@@ -69,6 +69,10 @@ def main():
     # parse spacy.txt
     print("Parse 'spacy.txt'")
     print("-" * 25)
+    print("Parsing 'spacy.txt'...")
+    parse_spacy()
+    print("Done!")
+    print("")
 
 
 if __name__ == "__main__":
