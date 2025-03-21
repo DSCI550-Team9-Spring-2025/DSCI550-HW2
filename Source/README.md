@@ -2,7 +2,7 @@
 
 #### Main Source Files
 - ```JOIN_COLUMNS.py``` or ```JOIN_COLUMNS.ipynb``` (TBD): final step, joins newly generated columns from ```.../Data/``` to generate ```v2.tsv```
-- ```spacy_andrew.py```: extracts name entities using SpaCy and writes to ```spacy.txt``` and parses it to generate ```../Data/spacy_andrew.csv```
+- ```get_spacy_col.py```: extracts name entities using SpaCy and writes to ```spacy.txt``` and parses it to generate ```../Data/spacy.csv```
 - ```...```: ...
 
 #### Supplementary Source Files
