@@ -1,3 +1,2 @@
 # These packages are required to run the tsv_nominatim_geoparser_code.py
 # Run 'pip install -r Requirements.txt'
-geopy
