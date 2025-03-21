@@ -3,15 +3,17 @@ import pandas as pd
 import time
 import os
 
-def runtime(func):
-    def wrapper(*args, **kwargs):
+def runtime(func) -> function:
+    """Wrapper function decorator to calculate runtime in seconds."""
+    def wrapper(*args, **kwargs) -> None:
         start = time.time()
         func(*args, **kwargs)
         end = time.time()
         print(f"{func.__name__} runtime: {end - start:.2f} seconds.")
     return wrapper
 
-def ner(text: str , nlp):
+def ner(text: str , nlp) -> str:
+    """Run SpaCy NER on description. Returns 'ent.text, ent.label_' for each ent"""
     ents = list(nlp(text).ents)
     res = ""
     for x in ents:
@@ -20,6 +22,7 @@ def ner(text: str , nlp):
 
 @runtime
 def write_spacy(df: pd.DataFrame):
+    """Iterates through df.description and writes result of ner() to 'spacy.txt'"""
     with open("spacy.txt", 'w') as file:
         nlp = spacy.load("en_core_web_sm")
         for index, row in df.iterrows():
@@ -27,6 +30,14 @@ def write_spacy(df: pd.DataFrame):
             file.write(str(index) + "...\n")
             file.write(entities)
             file.write("\n")
+
+@runtime
+def parse_spacy(path: str="spacy.txt"):
+    """Parses spacy.txt into '../Data/spacy_andrew.csv'."""
+    if not os.path.exists(path):
+        print(f"Error: {path} does not exist.")
+        return
+    
 
 def main():
     print("If you haven't, run", "'python -m spacy download en_core_web_sm'")
