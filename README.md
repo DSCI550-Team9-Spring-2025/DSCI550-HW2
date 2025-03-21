@@ -16,7 +16,7 @@ see https://github.com/Hibis5946/geotopicparser-utils/blob/master/README_tika_ge
 - ```cd lucene-geo-gazetteer```
 - ```mvn clean package```
 - ```mvn install assembly:assembly```
-= ```export PATH=$PATH:/root/lucene-geo-gazetteer/src/main/``` (or run ```$ source Source/lucene_addToPath.sh```
+= ```export PATH=$PATH:/root/lucene-geo-gazetteer/src/main/``` (or run ```source Source/lucene_addToPath.sh```
 - ```cd lucene-geo-gazetteer```
 - ```curl -O http://download.geonames.org/export/dump/allCountries.zip```
 - ```unzip allCountries.zip```
