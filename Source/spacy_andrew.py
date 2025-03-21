@@ -21,9 +21,9 @@ def ner(text: str , nlp) -> str:
     return res
 
 @runtime
-def write_spacy(df: pd.DataFrame):
-    """Iterates through df.description and writes result of ner() to 'spacy.txt'"""
-    with open("spacy.txt", 'w') as file:
+def write_spacy(df: pd.DataFrame, txtfile: str="spacy.txt"):
+    """Iterates through df.description and writes result of ner() to txtfile."""
+    with open(txtfile, 'w') as file:
         nlp = spacy.load("en_core_web_sm")
         for index, row in df.iterrows():
             entities = ner(row.description, nlp)
@@ -32,24 +32,47 @@ def write_spacy(df: pd.DataFrame):
             file.write("\n")
 
 @runtime
-def parse_spacy(path: str="spacy.txt"):
-    """Parses spacy.txt into '../Data/spacy_andrew.csv'."""
-    if not os.path.exists(path):
-        print(f"Error: {path} does not exist.")
+def parse_spacy(inpath: str="spacy.txt", outpath: str='../Data/spacy_andrew.csv', size: int=0):
+    """Parses input txt into output csv."""
+    if not os.path.exists(inpath):
+        print(f"Error: {inpath} does not exist.")
         return
     
+    # read line by line
+    with open(inpath, 'r') as file:
+        lines = file.readlines()
+
+    # populate parsed_data
+    parsed_data = [""] * size
+    index = None
+    for line in lines:
+        # empty line
+        if not line:
+            continue
+
+        # index line
+        if line[0].isdigit() and '...' in line:
+            index = int(line.split('...')[0])
+            parsed_data[index] = "" # initialize entry in parsed_data
+        # entity line
+        elif index is not None:
+            parsed_data[index] += line.strip() + '\n'
+
+    # generate output csv
+    df = pd.DataFrame(parsed_data, columns=["spacy_entities"])
+    print(df.columns)
+    df.to_csv(outpath, index=False)
 
 def main():
     print("IF YOU HAVEN'T, run", "'python -m spacy download en_core_web_sm'")
     print("")
 
-    print("Spacy NER")
+    print("Spacy NER with '../Data/v2.tsv'")
     print("-" * 50)
+    df = pd.read_csv("../Data/v2.tsv", usecols=["description"], sep='\t')
 
     # create spacy.txt: takes 2-3 minutes on andrew's machine
     if not os.path.exists("spacy.txt"):
-        df = pd.read_csv("../Data/v2.tsv", usecols=["description"], sep='\t')
-
         print("Sample")
         print("-" * 25)
         print("decription:\n", df.description.iloc[0])
@@ -70,8 +93,20 @@ def main():
     print("Parse 'spacy.txt'")
     print("-" * 25)
     print("Parsing 'spacy.txt'...")
-    parse_spacy()
+    parse_spacy(size=df.shape[0])
     print("Done!")
+    print("")
+
+    # spacy_andrew.csv sample
+    print("Result Sample")
+    print("-" * 25)
+    spacy_df = pd.read_csv("../Data/spacy_andrew.csv")
+    print("spacy_df.iloc[0]['spacy_entities']")
+    print("-" * 15)
+    print(spacy_df.iloc[0]['spacy_entities'])
+    print("spacy_df")
+    print("-" * 15)
+    print(spacy_df)
     print("")
 
 
