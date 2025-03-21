@@ -6,7 +6,7 @@
 - ```...```: ...
 
 #### Supplementary source files
-- ```clean_up_df.ipynb```: fixes apparition descriptors from ```v1.tsv``` to ```v2.tsv```
+- ```clean_up_df.ipynb```: cleans dataframe and fixes apparition descriptors from ```v1.tsv``` to ```v2.tsv```
 - ```lucene_addToPath.sh```: shell script to add lucene to $PATH env variable (run ```$ source lucene_addToPath.sh```)
 - ```...```: ...
 
