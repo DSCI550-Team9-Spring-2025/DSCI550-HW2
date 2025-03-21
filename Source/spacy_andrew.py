@@ -1,6 +1,7 @@
 import spacy
 import pandas as pd
 import time
+import os
 
 def runtime(func):
     def wrapper(*args, **kwargs):
@@ -18,7 +19,7 @@ def ner(text: str , nlp):
     return res
 
 @runtime
-def ner_column(df: pd.DataFrame):
+def write_spacy(df: pd.DataFrame):
     with open("spacy.txt", 'w') as file:
         nlp = spacy.load("en_core_web_sm")
         for index, row in df.iterrows():
@@ -27,27 +28,37 @@ def ner_column(df: pd.DataFrame):
             file.write(entities)
             file.write("\n")
 
-if __name__ == "__main__":
+def main():
     print("If you haven't, run", "'python -m spacy download en_core_web_sm'")
     print("")
 
     print("Spacy NER")
     print("-" * 50)
 
-    df = pd.read_csv("../Data/v2.tsv", usecols=["description"], sep='\t')
+    # create spacy.txt
+    if not os.path.exists("spacy.txt"):
+        df = pd.read_csv("../Data/v2.tsv", usecols=["description"], sep='\t')
 
-    print("Sample")
-    print("-" * 25)
-    print("decription:\n", df.description.iloc[0])
-    print("")
-    nlp = spacy.load("en_core_web_sm")
-    sample = ner(df.description.iloc[0], nlp=nlp)
-    print("return:\n", sample)
-    print("")
+        print("Sample")
+        print("-" * 25)
+        print("decription:\n", df.description.iloc[0])
+        print("")
+        nlp = spacy.load("en_core_web_sm")
+        sample = ner(df.description.iloc[0], nlp=nlp)
+        print("return:\n", sample)
+        print("")
 
-    print("Get spacy_entities column")
+        print("Get spacy_entities column")
+        print("-" * 25)
+        print("Writing to 'spacy.txt'")
+        write_spacy(df)
+        print("Done!")
+        print("")
+
+    # parse spacy.txt
+    print("Parse 'spacy.txt'")
     print("-" * 25)
-    print("Writing to 'spacy.txt'")
-    ner_column(df)
-    print("Done!")
-    print("")
+
+
+if __name__ == "__main__":
+    main()
