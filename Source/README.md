@@ -1,5 +1,14 @@
 Source code will go here. Structure to be determined.
 
-## Ignored in this directory
+## Main source files
+- ```JOIN_COLUMNS.py``` or ```JOIN_COLUMNS.ipynb``` (TBD): final step, joins newly generated columns from ```.../Data/``` to generate ```v2.tsv```
+- ```spacy_andrew.py```: extracts name entities using SpaCy and writes to ```spacy.txt``` and parses it to generate ```../Data/spacy_andrew.csv```
+- ```...```: ...
+
+## Supplementary source files
+- ```clean_up_df.ipynb```: fixes apparition descriptors from ```v1.tsv``` to ```v2.tsv```
+- ```...```: ...
+
+## *** ignored in this directory ***
 - lucene-geo-gazetteer: https://github.com/chrismattmann/lucene-geo-gazetteer<br>
-  - run ```$ source lucene_addToPath.sh```
+  - run ```$ source lucene_addToPath.sh``` to automatically add lucene to $PATH env variable
