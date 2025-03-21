@@ -5,7 +5,8 @@
 - Corrections from v1.tsv added "apparition_adj_str" and fixed keyword_dictionary for Apparition_Descriptors and added in Apparition_Adjectives. <br>
 
 #### New column data
-```spacy.csv```: NER using SpaCy<br>
+```spacy.csv```: SpaCy NER<br>
+```v2_with_geo.tsv```: geotagger<br>
 ```...```: ...
 
 #### Supplementary Data
