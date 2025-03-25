@@ -10,6 +10,7 @@ import os
 
 # Paths to Tika 2.6.0 setup (command to split)
 # java -classpath /root/tika/tika-app-2.6.0.jar:/root/tika/tika-parser-nlp-package-2.6.0.jar:/root/location-ner-model:/root/geotopic-mime org.apache.tika.cli.TikaCLI -m /root/geotopic-mime/cnn.geot
+# java -classpath TIKA_APP_JAR:TIKA_NLP_JAR:NER_MODEL_DIR:MIME_CONFIG_DIR org.apache.tika.cli.TikaCLI -m /root/geotopic-mime/cnn.geot
 
 TIKA_APP_JAR = "/root/tika/tika-app-2.6.0.jar"
 TIKA_NLP_JAR = "/root/tika/tika-parser-nlp-package-2.6.0.jar"
@@ -17,8 +18,8 @@ NER_MODEL_DIR = "/root/location-ner-model"
 MIME_CONFIG_DIR = "/root/geotopic-mime"
 
 # Input and output files
-INPUT_FILE = "/root/v2.geot"   # <-- Your input TSV file
-OUTPUT_FILE = "/root/v2_with_geo.tsv"  # <-- Output file
+INPUT_FILE = "/root/v2.geot"   # The input TSV file
+OUTPUT_FILE = "/root/v2_with_geo.tsv"  # The Output file
 
 # Geo fields to extract from Tika output
 GEO_FIELDS = [
