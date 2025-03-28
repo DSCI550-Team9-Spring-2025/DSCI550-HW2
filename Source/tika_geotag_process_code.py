@@ -3,6 +3,8 @@
 #Spring 2025
 #Team 9
 
+## Start Geo NER process
+
 import csv
 import subprocess
 import tempfile
@@ -155,4 +157,6 @@ def process_geot_file():
 
 if __name__ == "__main__":
     process_geot_file()
+
+##End geo NER process
 
