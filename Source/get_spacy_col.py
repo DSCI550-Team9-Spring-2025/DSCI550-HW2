@@ -53,7 +53,6 @@ def parse_spacy(inpath: str="spacy.txt", outpath: str='../Data/spacy.csv', size:
         # index line
         if line[0].isdigit() and '...' in line:
             index = int(line.split('...')[0])
-            parsed_data[index] = "" # initialize entry in parsed_data
         # entity line
         elif index is not None:
             parsed_data[index] += line.strip() + '\n'
