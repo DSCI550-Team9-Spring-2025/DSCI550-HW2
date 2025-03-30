@@ -32,7 +32,7 @@ def write_spacy(df: pd.DataFrame, txtfile: str="spacy.txt"):
             file.write("\n")
 
 @runtime
-def parse_spacy(inpath: str="spacy.txt", outpath: str='../Data/spacy.csv', size: int=0):
+def parse_spacy(inpath: str="spacy.txt", outpath: str='../Data/spacy.csv', haunted_df: pd.DataFrame=pd.read_csv("../Data/v1.tsv", sep='\t'), size: int=0):
     """Parses input txt into output csv."""
     if not os.path.exists(inpath):
         print(f"Error: {inpath} does not exist.")
@@ -59,6 +59,7 @@ def parse_spacy(inpath: str="spacy.txt", outpath: str='../Data/spacy.csv', size:
 
     # generate output csv
     df = pd.DataFrame(parsed_data, columns=["spacy_entities"])
+    df['description'] = haunted_df['description']
     df.to_csv(outpath, index=False)
     print(outpath + " created!")
 
