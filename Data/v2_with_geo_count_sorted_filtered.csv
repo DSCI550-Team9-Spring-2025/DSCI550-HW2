@@ -1,4 +1,4 @@
-Unnamed: 0,GeoName_Count,Geographic_LATITUDE,Geographic_LONGITUDE,Geographic_NAME,Optional_LATITUDE1,Optional_LATITUDE2,Optional_LATITUDE3,Optional_LATITUDE4,Optional_LONGITUDE1,Optional_LONGITUDE2,Optional_LONGITUDE3,Optional_LONGITUDE4,Optional_NAME1,Optional_NAME2,Optional_NAME3,Optional_NAME4
+index,GeoName_Count,Geographic_LATITUDE,Geographic_LONGITUDE,Geographic_NAME,Optional_LATITUDE1,Optional_LATITUDE2,Optional_LATITUDE3,Optional_LATITUDE4,Optional_LONGITUDE1,Optional_LONGITUDE2,Optional_LONGITUDE3,Optional_LONGITUDE4,Optional_NAME1,Optional_NAME2,Optional_NAME3,Optional_NAME4
 0,2,,,,43.0125,43.00142,,,-85.50056,-85.49169,,,Egypt Valley Country Club,Findlay Cemetery,,
 1,0,,,,,,,,,,,,,,,
 2,0,,,,,,,,,,,,,,,
