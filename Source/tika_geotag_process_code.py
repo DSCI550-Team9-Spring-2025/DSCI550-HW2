@@ -31,9 +31,13 @@ GEO_FIELDS = [
 ]
 
 def extract_geo_from_description(geot_content):
-    """ Runs the Tika CLI on a given .geot content and extracts geo metadata. """
+    """ Runs the Tika CLI on a given .geot content and extracts geo metadata. 
+    This function which include the classpath to the Tika-app, Tika-server, and the NER sentiment analysis parser, 
+    extract the geo metadata from the descrition column"""
+    
     with tempfile.NamedTemporaryFile(delete=False, suffix=".geot", mode="w") as tmp_file:
-        tmp_file.write(geot_content)
+        #create a temporary file tmp_file to save the geo metadata
+        tmp_file.write(geot_content) #Write the metadata in the temporary file
         tmp_path = tmp_file.name
 
     command = [
