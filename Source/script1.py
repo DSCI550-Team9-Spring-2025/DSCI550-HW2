@@ -9,10 +9,9 @@
 
 import pandas as pd
 
-#####################################
-# MAIN DATAFRAME
+###################MAIN DATAFRAME###################
 df = pd.read_csv("../Data/v1.tsv", sep="\t")
-#####################################
+####################################################
 
 ## Start Geo NER process
 import csv
@@ -167,11 +166,10 @@ def process_geot_file():
 
 if __name__ == "__main__":
     process_geot_file()
-##End geo NER process
-######################
+    
+################## End geo NER process###################
 
-# SpaCy NER
-#########################
+####################SpaCy NER####################
 df_spacy = df.copy()
 def spacy_col(df: pd.DataFrame):
     """Generates column for df['spacy_entities']"""
@@ -192,7 +190,9 @@ print("'spacy_entities' column generated! See df['spacy_entities']")
 print("")
 #print(df["spacy_entities"])
 
-###End Spacy###
+###################End Spacy###################
+
+
 
 
 
