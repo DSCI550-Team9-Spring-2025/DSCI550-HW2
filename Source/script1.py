@@ -192,6 +192,8 @@ print("'spacy_entities' column generated! See df['spacy_entities']")
 print("")
 #print(df["spacy_entities"])
 
+###End Spacy###
+
 
 
 
