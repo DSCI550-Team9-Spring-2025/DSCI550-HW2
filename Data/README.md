@@ -10,7 +10,7 @@
 ```spacy.csv```: SpaCy NER<br>
 ```v2_with_geo.tsv```: geotagger<br>
 ```merged_spacy_and_geo_v2.csv```: SpaCy-Geotagger merge<br>
-```v2_with_captions_and_objects.csv```: GenAI image and caption features with "v2.tsv" merged in.<br>
+```hw2_with_captions_and_objects.csv```: GenAI image and caption features with "v2.tsv" merged in.<br>
 
 #### Supplementary Data
 ```keywords_dictionary_v2.csv```: updated keyword bank for text matching schemas.<br>
