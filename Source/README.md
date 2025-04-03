@@ -8,5 +8,5 @@
 
 ## Supplementary Source Files
 - ```clean_up_df.ipynb```: cleans dataframe and fixes apparition descriptors from ```v1.tsv``` to ```v2.tsv```
-- ```lucene_addToPath.sh```: shell script to add lucene to $PATH env variable (run ```$ source lucene_addToPath.sh```)
+- ```lucene_addToPath.sh```: shell script to add lucene to $PATH env variable (run ```source lucene_addToPath.sh```)
 - ```spacy_analysis.ipynb```: analysis of SpaCy NER results (for report)
