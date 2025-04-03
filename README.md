@@ -11,7 +11,7 @@ Large scale data extraction and analysis for haunted places dataset.
 ## Dataset
 - ```Data/v2_final.tsv```
 ## Source Files
-- ```Source/merge_data.ipynb```: final step, joins newly generated columns from ```.../Data/``` to generate ```v2_final.tsv```<br>
+- ```Source/merge_data.ipynb```: final step, joins newly generated columns from to generate ```v2_final.tsv```<br>
 - ```Source/create_haunted_images.ipynb```: image generation<br>
 - ```Source/generate_image_cap_and_obj.ipynb```: image caption generation<br>
 - ```Source/script1.py```: streamlined geotagger and spacy processing<br>
