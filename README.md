@@ -14,7 +14,7 @@ Large scale data extraction and analysis for haunted places dataset.
 - ```Source/merge_data.ipynb```: final step, joins newly generated columns from to generate ```v2_final.tsv```<br>
 - ```Source/create_haunted_images.ipynb```: image generation<br>
 - ```Source/generate_image_cap_and_obj.ipynb```: image caption generation<br>
-- ```Source/script1.py```: streamlined geotagger and spacy processing<br>
+- ```Source/script1.py```: geotagger and spacy processing<br>
 ## Geoparser tool configuration to extract coordinate locations name
 see https://github.com/Hibis5946/geotopicparser-utils/blob/master/README_tika_geo_parser.txt<br>
 - ```git clone https://github.com/chrismattmann/lucene-geo-gazetteer.git```
