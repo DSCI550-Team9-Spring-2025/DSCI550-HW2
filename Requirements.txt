@@ -1,6 +1,7 @@
 # Run 'pip install -r Requirements.txt'
 numpy
 pandas
+requests
 spacy
 geopy
 torch
