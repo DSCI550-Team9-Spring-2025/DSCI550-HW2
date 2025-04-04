@@ -162,7 +162,7 @@ def process_geot_file():
 
     # Display the total count of geo names at the end
     print(f"[✓] Done. Output saved to: {OUTPUT_FILE}")
-    print(f"[✓] Total geo names found: {total_geo_name_count}")
+   
 
 if __name__ == "__main__":
     process_geot_file()
