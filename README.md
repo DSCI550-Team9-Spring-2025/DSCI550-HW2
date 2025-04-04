@@ -18,6 +18,8 @@ SubTeam: GenAI Images, Image Docker, Object Recognition Docker (create_haunted_i
 - ```Source/create_haunted_images.ipynb```: image generation<br>
 - ```Source/generate_image_cap_and_obj.ipynb```: image caption generation and image object recognition<br>
 - ```Source/script1.py```: geotagger and spacy processing<br>
+## Generated Stable Diffusion Images
+see https://drive.google.com/drive/folders/1nHVdrBTWEaS7V7ggoWn3JogsCVurk1_0?usp=sharing
 ## Geoparser tool configuration to extract coordinate locations name
 see https://github.com/Hibis5946/geotopicparser-utils/blob/master/README_tika_geo_parser.txt<br>
 - ```git clone https://github.com/chrismattmann/lucene-geo-gazetteer.git```
