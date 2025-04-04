@@ -4,8 +4,9 @@ Large scale data extraction and analysis for haunted places dataset.
 ## Contributors
 SubTeam: NER
 - Sena London
-- Kevin Sy: merge_data.ipynb (GeoParse,Spacy,GenAI), spacy_analysis.ipynb (NER comparisons location entities), project management (host team meetings, task assignment, meeting minutes), review/debug
+- Kevin Sy: merge_data.ipynb (GeoParse,Spacy,GenAI), spacy_analysis.ipynb (NER comparisons location entities), clean_up_df.ipynb, Project management (host team meetings, task assignment, meeting minutes), review/debug
 - Andrew Turangan
+
 SubTeam: GenAI Images
 - Anneliese Wilkins
 - Austin Oliver
