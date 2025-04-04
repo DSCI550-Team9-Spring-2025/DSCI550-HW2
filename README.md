@@ -44,7 +44,7 @@ see https://github.com/Hibis5946/geotopicparser-utils/blob/master/README_tika_ge
   ![image](https://github.com/user-attachments/assets/10e4c605-e192-46c0-a886-448e35430964)
 ##Sample cnn.geot geo metadata
   ![image](https://github.com/user-attachments/assets/23ff8429-68de-4d0c-8183-1afb397afd0d)
-  
+
 ##Tika config path
 ![image](https://github.com/user-attachments/assets/cd2bed09-3489-46db-b079-0053d06559b2)
 
