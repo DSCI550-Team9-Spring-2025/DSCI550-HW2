@@ -3,3 +3,15 @@ numpy
 pandas
 spacy
 geopy
+torch
+tqdm
+nltk
+os
+Image
+diffusers 
+transformers 
+accelerate  
+torchvision
+transformers 
+scipy 
+ftfy 
