@@ -1,7 +1,15 @@
-#This is code to extract geo name entities and their metadata using tika geoparser
-#USC
-#Spring 2025
-#Team 9
+"""
+This is the code to extract geo name entities and their metadata using tika geoparser
+USC
+Spring 2025
+Team 9
+"""
+
+"""
+Notes: I used the assistance of ChatGPT, MS Copilot to help fine tune this  code since it is allowed.
+I have read and understood the code provided by the AI tools, and is responsible for the final implementation.
+I have also made sure to follow the academic integrity guidelines of USC.
+"""
 
 ## Start Geo NER process
 
